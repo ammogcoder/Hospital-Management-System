@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.hms_app.RegisterPatientActivity"
+    android:background="#E8E8E8" >
+
+    <TextView
+        android:id="@+id/textview_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:text="Name:" />
+    
+    <EditText 
+        android:id="@+id/edittext_name"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:paddingLeft="5dp"
+        android:background="@+drawable/edittextshape"
+        android:layout_below="@id/textview_name"/>
+    
+    <TextView
+        android:id="@+id/textview_gender"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/edittext_name"
+        android:textSize="15sp"
+        android:text="Gender:" />
+    
+    <Spinner 
+        android:id="@+id/spinner_gender"
+        android:layout_below="@id/textview_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    
+    <TextView 
+        android:id="@+id/textview_dob"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        android:layout_below="@id/spinner_gender"
+        android:text="Date Of Birth:"/>
+    
+    <EditText 
+        android:id="@+id/edittext_dob"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:paddingLeft="5dp"
+        android:focusableInTouchMode="false"
+        android:background="@+drawable/edittextshape"
+        android:layout_below="@id/textview_dob"/>
+    
+    <TextView 
+        android:id="@+id/textview_phone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        android:layout_below="@id/edittext_dob"
+        android:text="Phone No.:"/>
+    
+    <EditText 
+        android:id="@+id/edittext_phone"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:paddingLeft="5dp"
+        android:inputType="number"
+        android:background="@+drawable/edittextshape"
+        android:layout_below="@+id/textview_phone"/>
+    
+    <TextView 
+        android:id="@+id/textview_address"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        android:layout_below="@id/edittext_phone"
+        android:text="Address:"/>
+    
+    <EditText 
+        android:id="@+id/edittext_address"
+        android:layout_height="55dp"
+        android:paddingLeft="5dp"
+        android:background="@+drawable/edittextshape"
+        android:layout_width="fill_parent"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:layout_below="@id/textview_address"
+        android:layout_marginBottom="10dp"/>
+    
+    <Button 
+        android:id="@+id/button_register"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Register"
+	    android:layout_marginTop="10dp"
+	    android:textColor="#00BFFF"
+	    android:onClick="button_register_onClick"
+	    android:layout_below="@id/edittext_address"
+	    android:background="@drawable/button_color"/>
+
+</RelativeLayout>

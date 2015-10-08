@@ -1,0 +1,74 @@
+﻿#legend2 {
+    font-weight:bold;
+    margin-left:-810px;
+    background-color:lightcoral;
+    color:white;
+}
+#legend3 {
+    font-weight:bold;
+    margin-left:-830px;
+    background-color:lightcoral;
+    color:white;
+}
+#legend4 {
+    font-weight:bold;
+    margin-left:-815px;
+    background-color:lightcoral;
+    color:white;
+}
+a[href="#"] {
+    float:right;
+    background-color:red;
+    color:white;
+}
+.heading {
+    font-weight:bold;
+    font-size:20pt;
+    color:black;
+}
+img {
+    width:45px;
+    height:45px;
+    padding-right:10px;
+}
+body {
+    font-family:'Century Gothic';
+    background-color:snow;
+}
+#table1 {
+    background-color:wheat;
+    border-collapse:collapse;
+    border:1px solid;
+    width:350px;
+}
+.tr1 {
+    background-color:snow;
+}
+.td1 {
+    padding-left:20px;
+}
+td {
+    padding:5px;
+}
+#div1 {
+    width:100%;
+    background-color:white;
+    border:1px solid;
+}
+#fieldset1 {
+    background-color:aliceblue;
+    width:90%;
+}
+#fieldset2 {
+    background-color:aliceblue;
+    width:90%;
+}
+#fieldset3 {
+    background-color:aliceblue;
+    width:95%;
+}
+#center1 {
+    background-color:lightgoldenrodyellow;
+    width:100%;
+    border:1px solid;
+}

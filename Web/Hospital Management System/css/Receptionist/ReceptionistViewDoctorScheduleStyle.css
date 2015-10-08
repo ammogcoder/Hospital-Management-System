@@ -1,0 +1,54 @@
+﻿body {
+    font-family:'Century Gothic';
+    background-color:snow;
+}
+#table1 {
+    margin: 10px auto;
+    width:670px;
+    border-collapse:collapse;
+}
+#table1 tr:first-child {
+    background-color:yellowgreen;
+}
+td {
+    padding-top:20px;
+    text-align:center;
+}
+.td1 {
+     background-color:lightgoldenrodyellow;
+}
+.td2 {
+    background-color:lightsteelblue;
+}
+.tr1 {
+    font-weight:bold;
+}
+.label {
+    font-size:20px;
+    font-weight:700;
+}
+img {
+    width:45px;
+    height:45px;
+    padding-right:10px;
+}
+#center1 {
+    background-color:lightgoldenrodyellow;
+    width:100%;
+    border:1px solid;
+}
+#center2 {
+    background-color:lightgoldenrodyellow;
+    width:95%;
+    border:1px solid;
+}
+.heading {
+    font-weight:bold;
+    font-size:23pt;
+    color:black;
+}
+#div1 {
+    background-color:white;
+    border:1px solid;
+    width:100%;
+}

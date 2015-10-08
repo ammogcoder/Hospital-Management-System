@@ -1,0 +1,115 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="ReceptionistMasterPage.master.cs" Inherits="Admin_AdminHomeMasterPage" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="<%# ResolveUrl("../css/style.css") %>" />
+    <link rel="stylesheet" href="<%# ResolveUrl("../css/jquery-ui.css") %>" />
+    <link rel="stylesheet" href="<%# ResolveUrl("../css/jquery-ui.structure.css") %>" />
+    <link rel="stylesheet" href="<%# ResolveUrl("../css/jquery-ui.theme.css") %>"/>
+    <link rel="stylesheet" href="<%# ResolveUrl("../css/jquery-ui.min.css") %>" />
+    <link rel="stylesheet" href="<%# ResolveUrl("../css/jquery.timepicker.css") %>" />
+    <link rel="stylesheet" href="<%# ResolveUrl("../css/Receptionist/ReceptionistMasterPageStyle.css") %>" />
+    <link rel="stylesheet" href="../css/Receptionist/swimbi-vertical.css" />
+
+    <script type="text/javascript" src="<%# ResolveUrl("../js/jquery.js") %>"></script>
+    <script type="text/javascript" src="<%# ResolveUrl("../js/jquery-ui.js") %>"></script>
+    <script type="text/javascript" src="<%# ResolveUrl("../js/jquery.timepicker.js") %>"></script>
+    <script type="text/javascript" src="<%# ResolveUrl("../js/Receptionist/swimbi-vertical.js") %>"></script>
+
+    <asp:ContentPlaceHolder id="script" runat="server">
+        <script type="text/javascript">
+            $(document).ready(function (e) {
+                $("#<%=LinkButton1.ClientID%>").click(function (e) {
+                    e.preventDefault();
+                    $("#div3").toggleClass("style1");
+                    var text = $(this).text();
+                    if (text == "Hide Menu") {
+                        $(this).text("Show Menu");
+                        $("#div5").removeClass("style2");
+                        $("#div5").addClass("style3");
+                    }
+                    else {
+                        $(this).text("Hide Menu");
+                        $("#div5").removeClass("style3");
+                        $("#div5").addClass("style2");
+                    }
+                });
+            });
+            function isNumberKey(evt) {
+                var charCode = (evt.which) ? evt.which : event.keyCode
+                if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                    alert("Please enter numeric data (0-9) only");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server"></asp:ToolkitScriptManager>
+    <div id="div4">
+        <center>
+            <asp:Label ID="Label2" runat="server" Font-Bold="true" Font-Size="25px" ForeColor="White" BackColor="YellowGreen" Text="Receptionist Module"></asp:Label>
+        </center>
+        <asp:LinkButton ID="LinkButton1" runat="server" CssClass="linkbutton1">Hide Menu</asp:LinkButton> 
+        <asp:Label ID="Label3" runat="server" CssClass="label2"></asp:Label>
+        <asp:Label ID="Label1" runat="server" Text="Label" CssClass="label1"></asp:Label>
+    </div>
+    <div id="div3">
+<div id="swimbi-vertical">
+    <ul>
+        <li><a href="ReceptionistHome.aspx">Home</a></li>
+        <li><a href="#">Patient</a>
+            <ul>
+                <li><a href="#" onclick="window.open('ReceptionistRegisterPatient.aspx', '_blank', 'width=970, height=650')">Add Patient</a></li>
+                <li><a href="#" onclick="window.open('ReceptionistOPDMedicalTest.aspx', '_blank', 'width=900, height=650');">Schedule Medical Test</a></li>
+                <li><a href="#" onclick="window.open('ReceptionistCreatePatientAppointment.aspx', '_blank', 'width=800, height=650')">Schedule Appointment</a></li>
+                <li><a href="#" onclick="window.open('ReceptionistRegisterIPDPatient.aspx', '_blank', 'width=800, height=650')">Register IPD</a></li>
+                <li><a href="#" onclick="window.open('ReceptionistSearchIPDPatient.aspx', '_blank', 'width=900, height=650');">Search IPD</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Phone Call</a>
+            <ul>
+                <li><a href="#" onclick="window.open('ReceptionistPhoneCallGeneralInquiry.aspx', '_blank', 'width=500, height=490')">General Inquiry</a></li>
+                <li><a href="#" onclick="window.open('ReceptionistPhoneCallTakeMessage.aspx', '_blank', 'width=500, height=450')">Take Message</a></li>
+                <li><a href="#" onclick="window.open('ReceptionistPhoneCallForward.aspx', '_blank', 'width=500, height=450')">Forward Call</a></li>
+                <li><a href="#" onclick="window.open('ReceptionistPhoneCallEmergency.aspx', '_blank', 'width=500, height=450')">Emergency</a></li>
+                <li><a href="#" onclick="window.open('ReceptionistPhoneCallRegister.aspx', '_blank', 'width=800, height=650')">Call Register</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Ward Management</a>
+            <ul>
+                <li><a href="#" onclick="window.open('ReceptionistAllWardDetails.aspx', '_blank', 'width=600, height=550')">Ward Details</a></li>
+                <li><a href="#" onclick="window.open('ReceptionistIPDPatientWardTransfer.aspx', '_blank', 'width=760, height=650');">Ward Transfer</a></li>
+            </ul>
+        </li>
+        <li><a href="#" onclick="window.open('ReceptionistDoctorScheduleRegister.aspx', '_blank', 'width=600, height=650');">Doctor Schedule</a></li>
+        <li><a href="#" onclick="window.open('ReceptionistViewReportsAndInvoices.aspx', '_blank', 'width=900, height=650');">Reports & Invoices</a></li>
+        <li><a href="#">Reminders</a>
+            <ul>
+                <li><a href="#" onclick="window.open('../AddReminder.aspx', '_blank', 'width=500, height=400')">Add Reminder</a></li>
+                <li><a href="#" onclick="window.open('../ViewAllReminders.aspx', '_blank', 'width=900, height=650');">View Reminders</a></li>
+            </ul>
+        </li>
+        <li><a href="ReceptionistLogOut.aspx">Log Out</a></li>
+    </ul>
+<canvas><noscript><a href="http://swimbi.com">Website swimbi , css menu creator</a> software of swimbi.com. All Rights Reserved</noscript></canvas>
+<div id="ie_message"><noscript>Local test in IE is better if you "<a href="http://f-source.com/swimbi/ie-allow-blocked-content/" target="_blank">Allow blocked content</a>" - click the button below.</noscript></div>
+</div>
+    </div>
+    <div id="div2">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

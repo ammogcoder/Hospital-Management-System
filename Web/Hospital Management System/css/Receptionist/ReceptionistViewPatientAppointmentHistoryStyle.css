@@ -1,0 +1,14 @@
+﻿body {
+    background-color:snow;
+    font-family:'Century Gothic';
+}
+legend {
+    font-size:20px;
+    background-color:cyan;
+}
+a[href="#"] {
+     float:right;
+     background-color:red;
+     color:white;
+     margin-bottom:20px;
+}

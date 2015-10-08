@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Hospital Management System</title>
+    <style>
+        #header {
+            border:1px solid;
+            width:1000px;
+            height:160px;
+            margin:20px auto;
+        }
+        #content {
+            border:1px solid;
+            width:1000px;
+            margin:auto;
+            height:400px;
+            background-color:lightblue;
+        }
+        #img1 {
+            width:1000px;
+            height:160px;
+        }
+    </style>
+    <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">    
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="header">
+            <img id="img1" src="../img/hospitalmanagement.jpg" />
+        </div>
+        <div id="content">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">    
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

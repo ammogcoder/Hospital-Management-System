@@ -1,0 +1,106 @@
+﻿body {
+    font-family:'Century Gothic';
+    background-color:snow;
+}
+#table1 {
+    border-collapse:collapse;
+    background-color:wheat;
+    border:1px solid;
+    width:400px;
+}
+#table1 td {
+    text-align:center;
+}
+#table2 {
+    margin: 10px auto;
+    width:650px;
+}
+.heading {
+    font-weight:bold;
+    font-size:20pt;
+    color:black;
+}
+.tr1 {
+    background-color:wheat;
+}
+.tr2 {
+    background-color:snow;
+}
+a[href="#"] {
+    float:right;
+    background-color:red;
+    color:white;
+}
+legend {
+    font-weight:bold;
+    margin-left:-800px;
+}
+fieldset {
+    background-color:white;
+}
+.span1 {
+    font-size:11pt;
+}
+.td1 {
+    text-align:center;
+}
+img {
+    width:45px;
+    height:45px;
+    padding-right:10px;
+}
+td {
+    padding:5px;
+}
+.label {
+    font-size:25px;
+    font-weight:700;
+}
+.button {
+    font-family: 'trebuchet ms';
+    font-weight: bold;
+    color: #FFFFFF !important;
+    font-size: 14px;
+    text-shadow: 1px 1px 0px #7CACDE;
+    box-shadow: 1px 1px 1px #BEE2F9;
+    padding: 10px 25px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 2px solid #3866A3;
+    background: #63B8EE;
+    background: linear-gradient(top,  #63B8EE,  #468CCF);
+    background: -ms-linear-gradient(top,  #63B8EE,  #468CCF);
+    background: -webkit-gradient(linear, left top, left bottom, from(#63B8EE), to(#468CCF));
+    background: -moz-linear-gradient(top,  #63B8EE,  #468CCF);
+}
+.button:hover {
+    color: #14396A !important;
+    background: #468CCF;
+    background: linear-gradient(top,  #468CCF,  #63B8EE);
+    background: -ms-linear-gradient(top,  #468CCF,  #63B8EE);
+    background: -webkit-gradient(linear, left top, left bottom, from(#468CCF), to(#63B8EE));
+    background: -moz-linear-gradient(top,  #468CCF,  #63B8EE);
+}
+input[type=text]{
+    border: 1px solid #c4c4c4; 
+    height: 20px; 
+    width: 275px; 
+    font-size: 13px; 
+    padding: 4px 4px 4px 4px; 
+    border-radius: 4px; 
+    -moz-border-radius: 4px; 
+    -webkit-border-radius: 4px; 
+    box-shadow: 0px 0px 8px #d9d9d9; 
+    -moz-box-shadow: 0px 0px 8px #d9d9d9; 
+    -webkit-box-shadow: 0px 0px 8px #d9d9d9;
+    font-weight:bold;
+    font-size:17px;
+}
+input[type=text]:focus {
+    outline: none; 
+    border: 1px solid #7bc1f7; 
+    box-shadow: 0px 0px 8px #7bc1f7; 
+    -moz-box-shadow: 0px 0px 8px #7bc1f7; 
+    -webkit-box-shadow: 0px 0px 8px #7bc1f7; 
+}

@@ -1,0 +1,49 @@
+﻿img {
+    width:45px;
+    height:45px;
+    padding-right:10px;
+}
+body {
+    font-family:'Century Gothic';
+    background-color:snow;
+}
+.heading {
+    font-weight:bold;
+    font-size:20pt;
+    color:black;
+}
+#div1 {
+    width:100%;
+    background-color:white;
+    border:1px solid;
+}
+#fieldset1 {
+    background-color:aliceblue;
+    width:90%;
+}
+#legend1 {
+    font-weight:bold;
+    margin-left:-330px;
+    background-color:lightcoral;
+    color:white;
+}
+#table1 {
+    width:105%;
+    margin-left:-13px;
+    margin-top:10px;
+    border-collapse:collapse;
+}
+.table tr:nth-child(2n+1) {
+    background-color:wheat;
+}
+td {
+    padding:5px;
+}
+.td1 {
+    padding-left:30px;
+}
+#center1 {
+    background-color:lightgoldenrodyellow;
+    width:100%;
+    border:1px solid;
+}

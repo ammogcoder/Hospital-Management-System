@@ -1,0 +1,55 @@
+﻿body {
+    font-family:'Century Gothic';
+    background-color:snow;
+}
+img {
+    width:45px;
+    height:45px;
+    padding-right:10px;
+}
+.heading {
+    font-weight:bold;
+    font-size:20pt;
+    color:black;
+}
+legend {
+    font-weight:bold;
+    margin-left:-550px;
+    background-color:lightcoral;
+    color:white;
+}
+.span1 {
+    font-size:11pt;
+    margin-left:40px;
+}
+select {
+    border: 1px solid #c4c4c4;
+    height: 25px;  
+    padding: 4px 4px 4px 4px; 
+    border-radius: 4px; 
+    -moz-border-radius: 4px; 
+    -webkit-border-radius: 4px; 
+    box-shadow: 0px 0px 8px #d9d9d9; 
+    -moz-box-shadow: 0px 0px 8px #d9d9d9; 
+    -webkit-box-shadow: 0px 0px 8px #d9d9d9;
+}
+#table1 td {
+    text-align:center;
+}
+td {
+    padding:5px;
+}
+#center1 {
+    background-color:lightgoldenrodyellow;
+    width:100%;
+    border:1px solid;
+}
+fieldset {
+    width:90%;
+    background-color:aliceblue;
+}
+#div1 {
+    border:1px solid;
+    background-color:white;
+    width:100%;
+}

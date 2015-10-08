@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="HRDoctorMasterPage.master.cs" Inherits="HR_HRDoctorMasterPage" MasterPageFile="~/HR/HRMasterPage.master" %>
+
+<asp:Content ID="Content1" runat="server" ContentPlaceHolderID="head">
+
+    <link rel="stylesheet" href="../css/HR/HRDoctorMasterPageStyle.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="Content2" runat="server" ContentPlaceHolderID="ContentPlaceHolder1">
+    <div class="style2" id="div5">
+        <div class="menu_div">
+            <div id="wrapper">
+                <nav>
+                    <ul class="menu">
+                      <li><a href="HRAddDoctor.aspx"><span>Add Doctor</span></a></li>
+                      <li><a href="DisplaySellers.aspx"><span>Delete Doctor</span></a></li>
+                      <li><a href="#"><span>Edit Doctor</span></a></li>
+                      <li><a href="#"><span>Doctor Schedule</span></a></li>
+                      <li><a href="#"><span>Doctor Salary</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+

@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="DoctorMasterPage.master.cs" Inherits="Doctor_DoctorMasterPage" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="<%# ResolveUrl("../css/style.css") %>" />
+    <link rel="stylesheet" href="<%# ResolveUrl("../css/jquery-ui.css") %>" />
+    <link rel="stylesheet" href="<%# ResolveUrl("../css/jquery-ui.structure.css") %>" />
+    <link rel="stylesheet" href="<%# ResolveUrl("../css/jquery-ui.theme.css") %>"/>
+    <link rel="stylesheet" href="<%# ResolveUrl("../css/jquery-ui.min.css") %>" />
+    <link rel="stylesheet" href="<%# ResolveUrl("../css/jquery.timepicker.css") %>" />
+    <link rel="stylesheet" href="../css/Doctor/DoctorMasterPageStyle.css" />
+    <link rel="stylesheet" href="../css/Doctor/swimbi-vertical.css" />
+
+    <script type="text/javascript" src="<%# ResolveUrl("../js/jquery.js") %>"></script>
+    <script type="text/javascript" src="<%# ResolveUrl("../js/jquery-ui.js") %>"></script>
+    <script type="text/javascript" src="<%# ResolveUrl("../js/jquery.timepicker.js") %>"></script>
+    <script type="text/javascript" src="<%# ResolveUrl("../js/Doctor/swimbi-vertical.js") %>"></script>
+    <asp:ContentPlaceHolder id="script" runat="server">
+        <script type="text/javascript">
+            $(document).ready(function (e) {
+                $("#<%=LinkButton1.ClientID%>").click(function (e) {
+                    e.preventDefault();
+                    $("#div3").toggleClass("style1");
+                    var text = $(this).text();
+                    if (text == "Hide Menu") {
+                        $(this).text("Show Menu");
+                        $("#div5").removeClass("style2");
+                        $("#div5").addClass("style3");
+                    }
+                    else {
+                        $(this).text("Hide Menu");
+                        $("#div5").removeClass("style3");
+                        $("#div5").addClass("style2");
+                    }
+                });
+            });
+            function isNumberKey(evt) {
+                var charCode = (evt.which) ? evt.which : event.keyCode
+                if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                    alert("Please enter numeric data (0-9) only");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server"></asp:ToolkitScriptManager>
+    <div id="div4">
+        <center>
+            <asp:Label ID="Label2" runat="server" Font-Bold="true" Font-Size="25px" ForeColor="White" BackColor="YellowGreen" Text="Doctor Module"></asp:Label>
+        </center>
+        <asp:LinkButton ID="LinkButton1" runat="server" CssClass="linkbutton1">Hide Menu</asp:LinkButton> 
+        <asp:Label ID="Label3" runat="server" CssClass="label2"></asp:Label>
+        <asp:Label ID="Label1" runat="server" Text="Label" CssClass="label1"></asp:Label>
+    </div>
+    <div id="div3">
+        <div id="swimbi-vertical">
+            <ul>
+                <li><a href="DoctorHome.aspx">Home</a></li>
+                <li><a href="#">IPD Patient</a>
+                    <ul>
+                        <li><a href="#" onclick="window.open('DoctorViewMyIPDPatients.aspx', '_blank', 'width=1150, height=650')">My Patients</a></li>
+                        <li><a href="#" onclick="window.open('DoctorIPDObservation.aspx', '_blank', 'width=1150, height=650')">IPD Observation</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" onclick="window.open('DoctorOPDAppointment.aspx', '_blank', 'width=1060, height=650')">OPD Appointment</a></li>
+                <li><a href="#">Schedule</a>
+                    <ul>
+                        <li><a href="#" onclick="window.open('DoctorDailySchedule.aspx', '_blank', 'width=740, height=650');">Daily Schedule</a></li>
+                        <li><a href="#" onclick="window.open('DoctorLeaveApplication.aspx', '_blank', 'width=500, height=550')">Leave Application</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Reminders</a>
+                    <ul>
+                        <li><a href="#" onclick="window.open('../AddReminder.aspx', '_blank', 'width=500, height=400')">Add Reminder</a></li>
+                        <li><a href="#" onclick="window.open('../ViewAllReminders.aspx', '_blank', 'width=900, height=650');">View Reminders</a></li>
+                    </ul>
+                </li>
+                <li><a href="DoctorLogOut.aspx">Log Out</a></li>
+            </ul>
+        </div>
+        <br />
+        <br />
+    </div>
+    <div id="div2">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

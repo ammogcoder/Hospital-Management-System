@@ -1,0 +1,126 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="HRMasterPage.master.cs" Inherits="HR_HRMasterPage" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="../style/jquery-ui.css" />
+    <link rel="stylesheet" href="../style/jquery-ui.structure.css" />
+    <link rel="stylesheet" href="../style/jquery-ui.theme.css" />
+    <link rel="stylesheet" href="../style/jquery-ui.min.css" />
+    <link rel="stylesheet" href="../style/jquery.timepicker.css" />
+    <link rel="stylesheet" href="../css/HR/HRMasterPageStyle.css" />
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../js/jquery.timepicker.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function (e) {
+            $("#<%=LinkButton1.ClientID%>").click(function (e) {
+                e.preventDefault();
+                $("#div3").toggleClass("style1");
+                var text = $(this).text();
+                if (text == "Hide Menu") {
+                    $(this).text("Show Menu");
+                    $("#div5").removeClass("style2");
+                    $("#div5").addClass("style3");
+                }
+                else {
+                    $(this).text("Hide Menu");
+                    $("#div5").removeClass("style3");
+                    $("#div5").addClass("style2");
+                }
+            });
+        });
+        function isNumberKey(evt) {
+            var charCode = (evt.which) ? evt.which : event.keyCode
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                alert("Please enter numeric data (0-9) only");
+                return false;
+            }
+            return true;
+        }
+    </script>
+        </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server"></asp:ToolkitScriptManager>
+    <div id="div4">
+        <asp:Button ID="Button2" runat="server" Text="Add Patient" CssClass="button1" />
+        <br />
+        <asp:LinkButton ID="LinkButton1" runat="server" CssClass="linkbutton1">Hide Menu</asp:LinkButton>
+        <asp:Button ID="Button3" runat="server" Text="Log Out" CssClass="button2" />
+        <asp:Label ID="Label1" runat="server" Text="Label" CssClass="label1"></asp:Label>
+    </div>
+    <div id="div3">
+        <asp:Accordion ID="Accordion1" runat="server" HeaderCssClass="header1">
+            <Panes>
+                <asp:AccordionPane ID="AccordionPane1" runat="server">
+                    <Header><img src="../images/icon1.ico" height="30" width="30"  /><a href="#" style="text-decoration:none;color:black;margin-left:10px;">Messages</a></Header>
+                    <Content>
+                        <asp:AccordionPane ID="AccordionPane11" runat="server" HeaderCssClass="header2">
+                            <Header><a href="#" style="text-decoration:none;color:black">Create Message</a></Header>
+                        </asp:AccordionPane>
+                        <asp:AccordionPane ID="AccordionPane12" runat="server" HeaderCssClass="header2">
+                            <Header><a href="#" style="text-decoration:none;color:black;">Inbox</a></Header>
+                        </asp:AccordionPane>
+                    </Content>
+                </asp:AccordionPane>
+                <asp:AccordionPane ID="AccordionPane2" runat="server">
+                    <Header><img src="../images/icon13.ico" height="30" width="30" /><a href="#" style="text-decoration:none;color:black;margin-left:10px;">Employee Management</a></Header>
+                    <Content>
+                         <asp:AccordionPane ID="AccordionPane21" runat="server" HeaderCssClass="header2">
+                            <Header><a href="HRDoctorManagement.aspx" style="text-decoration:none;color:black">Doctor</a></Header>
+                        </asp:AccordionPane>
+                        <asp:AccordionPane ID="AccordionPane22" runat="server" HeaderCssClass="header2">
+                            <Header><a href="HRRegisterEmployeeReceptionist.aspx" style="text-decoration:none;color:black">Receptionist</a></Header>
+                        </asp:AccordionPane>
+                        <asp:AccordionPane ID="AccordionPane23" runat="server" HeaderCssClass="header2">
+                            <Header><a href="HRRegisterEmployeeAccountant.aspx" style="text-decoration:none;color:black">Accountant</a></Header>
+                        </asp:AccordionPane>
+                    </Content>
+                </asp:AccordionPane>
+                <asp:AccordionPane ID="AccordionPane3" runat="server">
+                    <Header><img src="../images/icon14.png" width="30" height="30" /><a href="#" style="text-decoration:none;color:black;margin-left:10px;">Performance Monitoring</a></Header>
+                    <Content>
+                         <asp:AccordionPane ID="AccordionPane31" runat="server" HeaderCssClass="header2">
+                            <Header><a href="ReceptionistPhoneCallGeneralInquiry.aspx" style="text-decoration:none;color:black;margin-left:10px;">Doctor</a></Header>
+                        </asp:AccordionPane>
+                        <asp:AccordionPane ID="AccordionPane32" runat="server" HeaderCssClass="header2">
+                            <Header><a href="ReceptionistPhoneCallForward.aspx" style="text-decoration:none;color:black;margin-left:10px;">Receptionist</a></Header>
+                        </asp:AccordionPane>
+                        <asp:AccordionPane ID="AccordionPane33" runat="server" HeaderCssClass="header2">
+                            <Header><a href="ReceptionistPhoneCallTakeMessage.aspx" style="text-decoration:none;color:black;margin-left:10px;">Accountant</a></Header>
+                        </asp:AccordionPane>
+                    </Content>
+                </asp:AccordionPane>
+                <asp:AccordionPane ID="AccordionPane4" runat="server">
+                    <Header><img src="../images/icon4.png" width="30" height="30" /><a href="#" style="text-decoration:none;color:black;margin-left:10px;">Leave Application</a></Header>
+                </asp:AccordionPane>
+                <asp:AccordionPane ID="AccordionPane5" runat="server">
+                    <Header><img src="../images/icon5.gif" width="30" height="30" /><a href="#" style="text-decoration:none;color:black;margin-left:10px;">Complaint Register</a></Header>
+                    <Content>
+                    </Content>
+                </asp:AccordionPane>
+                <asp:AccordionPane ID="AccordionPane6" runat="server">
+                    <Header><img src="../images/icon6.ico" width="30" height="30" /><a href="#" style="text-decoration:none;color:black;margin-left:10px;">Miscellaneous</a></Header>
+                </asp:AccordionPane>
+            </Panes>
+        </asp:Accordion>
+
+    </div>
+    <div id="div2">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
