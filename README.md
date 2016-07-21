@@ -1,5 +1,5 @@
 # Hospital-Management-System
-While interning at Visual InfoSoft Pvt. Ltd., developed a cloud-based (PaaS) Hospital Management System (HMS) works on both mobile (Android operating system) as well as a web/browser application (ASP .NET). The Android application is used by the patient while the desktop/web application is used by the hospital staff. 
+Hospital Management System (HMS) works on both mobile (Android operating system) as well as a web/browser application (ASP .NET). The Android application is used by the patient while the desktop/web application is used by the hospital staff. 
 
 Using the mobile application, the patient can schedule an appointment with a doctor, ask the doctor questions regarding his diagnosis or treatment or call an ambulance in case of an emergency without visiting the hospital, thus saving patient's both time and resources. The patient can also manage his appointments, view complete information regarding his treatment through the app and schedule medical tests. The desktop/web application is used by the hospital staff (doctors and receptionists) for medical, financial and administrative aspects of the hospital. 
 
